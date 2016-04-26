@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+       
+<script>
+var doSomething= function()
+{if (value="m") {
+    alert("You picked MALE");
+} else if (value="f") {
+    alert("You picked FEMALE");
+} else {
+    alert("You picked OTHER");
+} }   
+</script>
+</head>
+<body>
+<form>
+<label>Gender:</label>
+<br>
+<input type="radio" name="gender" value="m" onclick="doSomething();" />Male
+<br>
+<input type="radio" name="gender" value="f" onclick="doSomething();" />Female<br>
+<input type="radio" name="gender" value="o" onclick="doSomething();" />Other<br>
+</form>
+</body>
+</html>
