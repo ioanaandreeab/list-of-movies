@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>JSON Sample</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<div id="questionnaire"></div>
+<script>
+  $.getJSON("http://127.0.0.1:5000", function(quiz) {
+        var output="<ul>";
+        for (var i in quiz) {
+            output+="<li>" + quiz[i].question +"</li>";
+            answers = quiz[i].answers
+            for (j = 0; j< answers.length; j++){
+                output+="<input type='radio'>" + answers[j].response;
+	    }
+        }
+        output+="</ul>";
+        document.getElementById("questionnaire").innerHTML=output;
+  });
+    </script>
+  
+</body>
+</html>
